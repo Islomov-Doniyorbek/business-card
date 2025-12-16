@@ -95,11 +95,13 @@ function copyToClipboard(value: string) {
   }
 };
 
+  const n=100;
   return (
     <div className=" w-full min-h-screen  pb-1 px-0.5">
       <div className="header bg-[#02544f] border border-[rgb(255,153,0)] pt-10 pb-6 ">
         <div className="logo w-full flex bg-[#02544f] justify-center items-center pt-3.5">
           <Image src={Logo} width={280} alt="Logo"/>
+
         </div>
         {/* <div className="flex mt-3 text-2xl text-[#f0ffff] w-full justify-center items-center gap-2">
           <p>Buxgalteriya</p>
@@ -127,7 +129,7 @@ function copyToClipboard(value: string) {
         </div>
       </div>
 
-      <div className="px-2 py-5 bg-[#00544f] border border-[rgb(255,153,0)] mt-0.5">
+      <div className="px-2 py-5 bg-[#00544f] mt-0.5">
         <h3 className="text-lg text-center text-[#f0ffff]">Ijtimoiy tarmoqlar</h3>
         {
           smms.map(l=>{
@@ -135,7 +137,7 @@ function copyToClipboard(value: string) {
               <div key={l.id}
               className="
               flex items-center gap-4
-                px-3 py-2 rounded-[7px] border border-[rgb(255,153,0)] shadow-[inset_0_0_6px_rgba(255,153,0,0.7)]
+                px-3 py-2 rounded-[7px]
                bg-[#00000033] text-[#f0ffff] mt-2
               ">
                 <p className="text-sm flex items-center">{l.icon}</p> 
@@ -146,7 +148,7 @@ function copyToClipboard(value: string) {
         }
         
       </div>
-      <div className="px-2 py-5 bg-[#00544f] border border-[rgb(255,153,0)]  mt-0.5">
+      <div className="px-2 py-5 bg-[#00544f] ]  mt-0.5">
         <h3 className="text-lg text-center text-[#f0ffff]">Aloqa</h3>
         {
           contact.map(l=>{
@@ -155,7 +157,7 @@ function copyToClipboard(value: string) {
               className="
               flex items-center gap-4
               py-2 px-3 justify-between rounded-[7px]
-              bg-[#00000033] border border-[rgb(255,153,0)] text-[#f0ffff] mt-2 shadow-[inset_0_0_6px_rgba(255,153,0,0.7)]
+              bg-[#00000033] ] text-[#f0ffff] mt-2 ]
               ">
                 <p className="flex items-center gap-1.5">{l.icon}
                 {l.link ? <Link href={l.link} className="text-sm">{l.txt}</Link> : <span className="text-sm">{l.txt}</span>}</p>
@@ -169,11 +171,11 @@ function copyToClipboard(value: string) {
 
         
       </div>
-      <div className="px-2 py-5 border border-[rgb(255,153,0)] bg-[#00544f] flex flex-col items-center gap-1.5
+      <div className="px-2 py-5  bg-[#00544f] flex flex-col items-center gap-1.5
                pt-2 my-0.5 text-[#f0ffff] ">
 
                <h3 className="text-lg text-center text-[#f0ffff]">Manzil</h3>
-          <p className="py-2 px-3 rounded-[7px] border border-[rgb(255,153,0)]
+          <p className="py-2 px-3 rounded-[7px] 
               bg-[#00000033] text-[#f0ffff] mt-2 text-sm">
             
             Toshkent shahar, Yakkasaroy tumani, Shota Rustaveli ko`chasi 150-uy
