@@ -52,7 +52,7 @@ export default function Home() {
       id:2,
       icon: <FaEnvelope/>,
       txt: "hisobchi-official.@gmail.com",
-      link: "https://hisobchi-official.@gmail.com"
+      link: "https://hisobchi.official@gmail.com"
     },
     {
       id:3,
