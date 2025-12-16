@@ -2,7 +2,7 @@
 import Logo from "@/public/hisobchi-logo.svg"
 import Image from "next/image";
 import Link from "next/link";
-import { FaClock, FaEnvelope, FaGlobe, FaGlobeAfrica, FaInstagram, FaMapPin, FaPhone, FaPhoneAlt, FaShareAlt } from "react-icons/fa";
+import { FaClock, FaEnvelope, FaGlobe, FaGlobeAfrica, FaInstagram, FaMapPin, FaPhone, FaPhoneAlt, FaShareAlt, FaTelegramPlane } from "react-icons/fa";
 import { FaEye, FaTelegram, FaYoutube } from "react-icons/fa6";
 import { MdHourglassBottom, MdLocationCity } from "react-icons/md";
 
@@ -39,11 +39,15 @@ export default function Home() {
       id:0,
       icon: <FaPhone />,
       txt: "+998 77 287 01 10",
+      link: "https://t.me/marufjon_qodirov",
+      tel: true
     },
     {
       id:1,
       icon: <FaPhone />,
       txt: "+998 94 009 30 01",
+      link: "https://t.me/marufjon_qodirov",
+      tel: true
     },
     {
       id:2,
@@ -93,7 +97,7 @@ function copyToClipboard(value: string) {
 };
 
   return (
-    <div className=" w-full min-h-screen  pb-1">
+    <div className=" w-full min-h-screen  pb-1 px-0.5">
       <div className="header bg-[#02544f] border-b border-b-[#ff9900] pt-10 pb-6 ">
         <div className="logo w-full flex bg-[#02544f] justify-center items-center pt-3.5 ">
           <Image src={Logo} width={280} alt="Logo"/>
@@ -106,15 +110,15 @@ function copyToClipboard(value: string) {
           <p>Soliq</p>
         </div> */}
         <div className="smmBtns w-full flex items-center justify-center gap-5 mt-6">
-          <button className="bg-[#02544f] text-[#f0ffff]  text-lg transition duration-700 rounded-full w-10 h-10 flex items-center justify-center border border-[#f0ffff]
+          <button className="bg-[#02544f] text-[#f0ffff]  text-sm transition duration-700 rounded-full w-10 h-10 flex items-center justify-center border border-[#f0ffff]
           hover:bg-[#f0ffff] hover:text-[#02544f]">
             <FaPhoneAlt  className=""/>
           </button>
-          <button className="bg-[#02544f] text-[#f0ffff]  text-lg transition duration-700 rounded-full w-10 h-10 flex items-center justify-center border border-[#f0ffff]
+          <button className="bg-[#02544f] text-[#f0ffff]  text-sm transition duration-700 rounded-full w-10 h-10 flex items-center justify-center border border-[#f0ffff]
           hover:bg-[#f0ffff] hover:text-[#02544f]">
             <FaEnvelope className=""/>
           </button>
-          <button className="bg-[#02544f] text-[#f0ffff]  text-lg transition duration-700 rounded-full w-10 h-10 flex items-center justify-center border border-[#f0ffff]
+          <button className="bg-[#02544f] text-[#f0ffff]  text-sm transition duration-700 rounded-full w-10 h-10 flex items-center justify-center border border-[#f0ffff]
           hover:bg-[#f0ffff] hover:text-[#02544f]">
             <FaShareAlt
             onClick={handleShare}
@@ -124,18 +128,18 @@ function copyToClipboard(value: string) {
       </div>
 
       <div className="px-2 py-5 border bg-[#00544f] mt-0.5">
-        <h3 className="text-2xl text-center text-[#f0ffff]">Ijtimoiy tarmoqlar</h3>
+        <h3 className="text-lg text-center text-[#f0ffff]">Ijtimoiy tarmoqlar</h3>
         {
           smms.map(l=>{
             return (
               <div key={l.id}
               className="
               flex items-center gap-4
-                px-3 rounded-[7px]
+                px-3 py-2 rounded-[7px]
                bg-[#00000033] text-[#f0ffff] mt-2
               ">
-                <p className="text-2xl flex items-center">{l.icon}</p> 
-                <Link href={l.link} className="text-2xl flex items-center">{l.txt}</Link>
+                <p className="text-sm flex items-center">{l.icon}</p> 
+                <Link href={l.link} className="text-sm flex items-center">{l.txt}</Link>
               </div>
             )
           })
@@ -143,18 +147,20 @@ function copyToClipboard(value: string) {
         
       </div>
       <div className="px-2 py-5 border bg-[#00544f] mt-0.5">
-        <h3 className="text-2xl text-center text-[#f0ffff]">Aloqa</h3>
+        <h3 className="text-lg text-center text-[#f0ffff]">Aloqa</h3>
         {
           contact.map(l=>{
             return (
               <div key={l.id}
               className="
               flex items-center gap-4
-              pt-2 px-3 rounded-[7px]
+              py-2 px-3 justify-between rounded-[7px]
               bg-[#00000033] text-[#f0ffff] mt-2
               ">
-                <span className="text-lg">{l.icon}</span> 
-                {l.link ? <Link href={l.link} className="text-lg">{l.txt}</Link> : <span className="text-lg">{l.txt}</span>}
+                <p className="flex items-center gap-1.5">{l.icon}
+                {l.link ? <Link href={l.link} className="text-sm">{l.txt}</Link> : <span className="text-sm">{l.txt}</span>}</p>
+                <p>{l.tel ? <Link href={l.link}><FaTelegramPlane /></Link> : ""}</p>
+                
               </div>
             )
           })
@@ -166,9 +172,9 @@ function copyToClipboard(value: string) {
       <div className="px-2 py-5 border bg-[#00544f] flex flex-col items-center gap-1.5
                pt-2 my-0.5 text-[#f0ffff] ">
 
-               <h3 className="text-2xl text-center text-[#f0ffff]">Manzil</h3>
+               <h3 className="text-lg text-center text-[#f0ffff]">Manzil</h3>
           <p className="py-2 px-3 rounded-[7px]
-              bg-[#00000033] text-[#f0ffff] mt-2">
+              bg-[#00000033] text-[#f0ffff] mt-2 text-sm">
             
             Toshkent shahar, Yakkasaroy tumani, Shota Rustaveli ko`chasi 150-uy
           <iframe
