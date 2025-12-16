@@ -1,6 +1,7 @@
 'use client'
-import Logo from "@/public/hisobchi90.svg"
+import Logo from "@/public/hisobchi-logo.svg"
 import Image from "next/image";
+import Link from "next/link";
 import { FaClock, FaEnvelope, FaGlobe, FaGlobeAfrica, FaInstagram, FaMapPin, FaPhone, FaPhoneAlt, FaShareAlt } from "react-icons/fa";
 import { FaEye, FaTelegram, FaYoutube } from "react-icons/fa6";
 import { MdHourglassBottom, MdLocationCity } from "react-icons/md";
@@ -18,31 +19,20 @@ export default function Home() {
       id:0,
       icon: <FaTelegram />,
       txt: "t.me/hisobchi_official",
-      link: "t.me/hisobchi_official",
+      link: "https://t.me/hisobchi_official",
     },
     {
       id:1,
       icon: <FaInstagram/>,
       txt: "@hisobchi.pro",
-      link: "@hisobchi.pro"
+      link: "https://hisobchi.pro"
     },
-    // {
-    //   id:2,
-    //   icon: <FaEnvelope/>,
-    //   txt: "hisobchi-official@gmail.com"
-    // },
     {
       id:2,
       icon: <FaGlobe/>,
       txt: "www.hisobchi-pro.uz",
       link: "www.hisobchi-pro.uz"
     },
-    // {
-    //   id:3,
-    //   icon: <MdHourglassBottom/>,
-    //   txt: "Tez orada ...",
-    //   link: "Tez orada ...",
-    // },
   ]
   const contact = [
     {
@@ -59,7 +49,7 @@ export default function Home() {
       id:2,
       icon: <FaEnvelope/>,
       txt: "hisobchi-official.@gmail.com",
-      link: "@hisobchi.pro"
+      link: "https://hisobchi-official.@gmail.com"
     },
     {
       id:3,
@@ -75,6 +65,15 @@ export default function Home() {
     },
   ]
 
+function copyToClipboard(value: string) {
+  navigator.clipboard.writeText(value)
+    .then(() => {
+      console.log(`"${value}" buferga nusxalandi!`);
+    })
+    .catch(err => {
+      console.error('Buferga nusxalashda xatolik:', err);
+    });
+}
 
 
   const handleShare = async () => {
@@ -136,7 +135,7 @@ export default function Home() {
                bg-[#00000033] text-[#f0ffff] mt-2
               ">
                 <p className="text-2xl flex items-center">{l.icon}</p> 
-                <p className="text-2xl flex items-center">{l.txt}</p>
+                <Link href={l.link} className="text-2xl flex items-center">{l.txt}</Link>
               </div>
             )
           })
@@ -155,7 +154,7 @@ export default function Home() {
               bg-[#00000033] text-[#f0ffff] mt-2
               ">
                 <span className="text-lg">{l.icon}</span> 
-                <span className="text-lg">{l.txt}</span>
+                {l.link ? <Link href={l.link} className="text-lg">{l.txt}</Link> : <span className="text-lg">{l.txt}</span>}
               </div>
             )
           })
