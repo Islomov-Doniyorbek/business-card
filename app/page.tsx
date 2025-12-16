@@ -1,5 +1,5 @@
 'use client'
-import Logo from "@/public/hisobchi-logo366.svg"
+import Logo from "@/public/hisobchi-logo999.svg"
 import Image from "next/image";
 import Link from "next/link";
 import { FaClock, FaEnvelope, FaGlobe, FaGlobeAfrica, FaInstagram, FaMapPin, FaPhone, FaPhoneAlt, FaShareAlt, FaTelegramPlane } from "react-icons/fa";
