@@ -24,7 +24,7 @@ export default function Home() {
       id:1,
       icon: <FaInstagram/>,
       txt: "@hisobchi.pro",
-      link: "https://hisobchi.pro"
+      link: "https://www.instagram.com/hisobchi.pro?igsh=MWJzNG1paWF2cnB3ZQ=="
     },
     {
       id:2,
