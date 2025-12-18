@@ -38,7 +38,7 @@ export default function Home() {
       id:0,
       icon: <FaPhone />,
       txt: "+998 77 287 01 10",
-      link: "https://t.me/marufjon_qodirov",
+      link: "https://t.me/hisobchi_0110",
       tel: true
     },
     {
@@ -51,17 +51,11 @@ export default function Home() {
     {
       id:2,
       icon: <FaEnvelope/>,
-      txt: "hisobchi-official.@gmail.com",
+      txt: "hisobchi.official.@gmail.com",
       link: "https://hisobchi.official@gmail.com"
     },
     {
       id:3,
-      icon: <FaTelegram/>,
-      txt: "t.me/marufjon_qodirov",
-      link: "https://t.me/marufjon_qodirov"
-    },
-    {
-      id:4,
       icon: <FaTelegram/>,
       txt: "t.me/marufjon_qodirov",
       link: "https://t.me/marufjon_qodirov"
@@ -97,8 +91,9 @@ function copyToClipboard(value: string) {
 
   const n=100;
   return (
-    <div className=" w-full min-h-screen  pb-1 px-0.5">
-      <div className="header bg-[#02544f] border border-[rgb(255,153,0)] pt-10 pb-6 ">
+    <div className=" w-full flex justify-center min-h-screen  pb-1 px-0.5">
+      <div className="w-sm">
+        <div className="header bg-[#02544f] border border-[rgb(255,153,0)] pt-10 pb-6 ">
         <div className="logo w-full flex bg-[#02544f] justify-center items-center pt-3.5">
           <Image src={Logo} width={280} alt="Logo"/>
 
@@ -189,6 +184,7 @@ function copyToClipboard(value: string) {
         />
           </p>
        </div>
+      </div>
     </div>
   );
 }
